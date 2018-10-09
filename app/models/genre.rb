@@ -17,7 +17,7 @@ class Genre < ActiveRecord::Base
   def all_artist_names
     # return an array of strings containing every musician's name
     self.songs.collect do |song|
-      song.artist unless song.artist == nil
+      song.artist.name unless song.artist.name == nil
     end.uniq
   end
 end
