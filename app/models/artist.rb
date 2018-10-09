@@ -14,6 +14,6 @@ class Artist < ActiveRecord::Base
     #return the number of genres associated with the artist
     self.songs.collect do |song|
       song.genre unless song.genre == nil
-    end.uniq!.count
+    end.uniq.count
   end
 end
